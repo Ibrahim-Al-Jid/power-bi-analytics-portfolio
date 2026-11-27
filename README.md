@@ -161,6 +161,7 @@ power-bi-analytics-portfolio/
 ## Data notes
 
 - The datasets come from public sources and sample sets, and are used here for learning and demonstration. They belong to their original publishers.
+- COVID-19 data: [Our World in Data](https://github.com/owid/covid-19-data), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The cleaned file in this repository is derived from it.
 - The Adidas dashboard is a practice project with Adidas styling. Its data is embedded in the `.pbix` and is not company data.
 - The Retail data contains one invoice with an invalid date. The report drops it, and the project README explains how this affects the totals.
 
