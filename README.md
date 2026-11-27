@@ -1,117 +1,62 @@
-![Power BI Analytics Portfolio](assets/repo-banner.jpg)
+<div align="center">
 
 # 📊 Power BI Analytics Portfolio
 
-A professional GitHub repository showcasing end-to-end Power BI projects focused on data analysis, visualization, and business insights.  
-This repository is designed as a **portfolio** for recruiters, collaborators, and learners.
+**Five end-to-end Power BI projects: from raw data to a decision-ready dashboard.**
 
----
+🌐 **English** | [العربية](README.ar.md)
 
-## 🎯 Purpose of This Repository
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-measures-blue)
+![Power Query](https://img.shields.io/badge/Power%20Query-M-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-- Showcase **real-world Power BI projects**
-- Demonstrate skills in:
-  - Data modeling
-  - DAX calculations
-  - Power Query
-  - Dashboard design
-  - Business analysis
-- Provide clear, well-documented case studies
+![Power BI Analytics Portfolio](assets/repo-banner.jpg)
 
----
+</div>
 
-## 📈 What This Portfolio Demonstrates
+## About
 
-- End-to-end Power BI workflow (data → model → dashboard → insights)
-- Strong understanding of business-oriented analytics
-- Ability to communicate insights clearly through visuals
-- Clean, structured, and maintainable project organization
+I am **Ibrahim Hamdy**, a data analyst working in Power BI. This repository collects five complete projects. Each one has the dashboard file (`.pbix`), the data, screenshots, and a README that explains the questions asked, what the dashboard shows, and what the numbers say.
 
----
+## Projects
 
-## 🛠 Tools & Technologies
+| # | Project | Domain | Data | Highlights |
+|---|---------|--------|------|-----------|
+| 1 | [🎵 Spotify Streaming Analysis](Spotify%20Streaming%20Analysis/README.md) | Music analytics | 27,800 daily Top-50 chart entries, May 2023 to Nov 2024 | 4 pages, custom navigation, dirty-vs-clean data |
+| 2 | [🌍 COVID-19 Global Analysis](Covid-19%20Global%20Analysis/README.md) | Healthcare | 44K daily country rows, Dec 2019 to Sep 2020 | 4 pages, case trend and CFR measures, policy vs outcome |
+| 3 | [👟 Adidas Sales Dashboard](Adidas%20Sales%20Dashboard/README.md) | Retail | 2016 to 2018 sales | One-page executive view, Sankey, map |
+| 4 | [🛒 Retail Sales Performance Q1 2019](Retail-Sales-Performance-Q1-2019/README.md) | Retail | 1,000 invoices, 3 branches | KPIs, branch and product-line split |
+| 5 | [📦 Item Sales Performance](Item-Sales-Performance-Analysis/README.md) | Sales and operations | 26,397 sales lines, star schema | Profit, margin, state and item ranking |
 
-- Power BI Desktop  
-- DAX  
-- Power Query (M)  
-- Excel / CSV datasets  
-- SQL (where applicable)
+## Skills shown
 
----
+- Data cleaning and transformation in **Power Query (M)**
+- Data modeling (star schema, relationships)
+- **DAX** measures and calculated columns
+- Dashboard design, navigation, and storytelling
+- Turning numbers into insights and recommendations
 
-## 📂 Projects Overview
+## Repository layout
 
-Each folder inside the `projects` directory represents a **standalone Power BI project** and includes:
+```
+power-bi-analytics-portfolio/
+├── README.md / README.ar.md          # this page (EN / AR)
+├── assets/                           # banner
+├── Spotify Streaming Analysis/
+├── Covid-19 Global Analysis/
+├── Adidas Sales Dashboard/
+├── Retail-Sales-Performance-Q1-2019/
+└── Item-Sales-Performance-Analysis/
+    └── each: README.md, README.ar.md, .pbix, data/, assets/
+```
 
-- Power BI `.pbix` file  
-- Dataset (sample or anonymized)  
-- Screenshots of dashboards  
-- Detailed project README  
-- Business insights and recommendations  
+## How to use
 
----
+1. Install [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free, Windows).
+2. Open a project folder and read its README.
+3. Open the `.pbix` file. If Power BI asks for the data location, point it to the project's data folder.
 
-## 📂 Power BI Portfolio Projects
+## License
 
-| Project Name | Business Domain | Description | Tools | Status |
-|-------------|----------------|-------------|-------|--------|
-| **Spotify Streaming Analysis** | Music Streaming Analytics | Analysis of streaming trends, top artists, popular songs, and user engagement metrics to uncover listening behavior patterns. | Power BI, DAX | ✅ Completed |
-| **Covid-19 Global Analysis** | Healthcare Analytics | Global analysis of COVID-19 cases, deaths, and recovery trends across countries and regions. | Power BI, DAX | ✅ Completed |
-| **Adidas Sales Dashboard** | Retail & Consumer Goods | Sales performance analysis for Adidas products focusing on revenue, regions, product categories, and profitability. | Power BI, DAX | ✅ Completed |
-| **Retail-Sales-Performance-Q1-2019** | Retail & Sales Analytics | Evaluation of retail sales performance during Q1 2019 with insights into monthly trends and sales distribution. | Power BI, DAX | ✅ Completed |
-| **Item-Sales-Performance-Analysis** | Sales & Operations Analytics | Item-level sales analysis highlighting total sales, quantity sold, profitability, and regional performance. | Power BI, DAX | ✅ Completed |
-
-
-
----
-
-## 🚀 How to Use This Repository
-
-1. Browse the `projects` folder.
-2. Open any project folder to view:
-   - Project README
-   - Dashboard screenshots
-   - Power BI `.pbix` file
-3. Download the `.pbix` file to explore the dashboard interactively using Power BI Desktop.
-
----
-
-## 🖼 Screenshots & Visuals
-
-Each project includes a `screenshots` folder containing:
-
-- Full dashboard overview
-- Key report pages
-- Filters or drill-down examples
-
-Screenshots are embedded inside each project README for quick review.
-
----
-
-## 👩‍💻 About Us
-
-Aspiring Data Analysts with a strong focus on Power BI and data visualization.  
-Passionate about transforming raw data into meaningful insights and clear business stories.
-
----
-
-## 🤝 Collaboration
-
-All projects in this repository were developed **in collaboration** by:
-
-**Ibrahim Hamdy Ibrahim**  
-**Zeinab Ahmed**  
-- Email: *zeinb21ahmed@gmail.com* 
-- GitHub: *https://github.com/ZeinbAhmed21*
-- LinkedIn: *https://www.linkedin.com/in/zeinb-ahmed-343019357/?locale=en_US*
-
----
-
-## 📬 Contact
-
-- LinkedIn: *https://www.linkedin.com/in/ibrahim-hamdy-83a964292/*  
-- Email: *ihamdy719@gmail.com*  
-
----
-
-⭐ If you find this repository useful, feel free to star it!
+[MIT](LICENSE). Datasets belong to their original publishers and are used for learning and demonstration.
