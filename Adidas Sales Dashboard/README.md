@@ -1,145 +1,59 @@
 # 👟 Adidas Sales Dashboard
 
-## 📌 Project Overview
+🌐 **English** | [العربية](README.ar.md) · [← Back to portfolio](../README.md)
 
-This Power BI project analyzes **Adidas sales performance** across multiple dimensions including **time, geography, and product categories**.  
-The dashboard is designed as a **one-page executive view** that enables stakeholders to quickly assess financial performance and identify trends.
+A one-page executive Power BI dashboard on sales from 2016 to 2018: headline financial KPIs, net sales by category and city, and monthly seasonality.
 
-The report covers sales data from **2016 to 2018** and focuses on delivering **clear, actionable business insights**.
+![Dashboard](assets/dashboard.png)
 
----
+## Business questions
 
-## 🎯 Project Objectives
+- How large is net revenue, and how much do discounts take away?
+- Which product categories drive revenue?
+- Which cities sell the most?
+- Is there seasonality across months and years?
 
-- Monitor overall sales performance using key financial KPIs  
-- Analyze net sales across product categories  
-- Explore geographic sales distribution across major cities  
-- Identify seasonal sales trends over months and years  
-- Provide an interactive, filter-driven decision-making tool  
+## Dashboard content
 
----
+| Element | What it shows |
+|---------|---------------|
+| Filters | Year range slider (2016 to 2018) and category selector |
+| KPIs | Gross sales $217.6M, discount value $27.2M, net sales $190.4M, quantity 6M units |
+| Map | Net sales by Egyptian city: Alexandria, Cairo, Giza, Port Said, Ismailia, Luxor, Sharm El Sheikh |
+| Bar chart | Net sales by category: Bikes $148.14M, Clothing $22.65M, Accessories $12.13M, Components $7.49M |
+| Sankey | Net sales flow by year and city |
+| Area chart | Net sales by month |
 
-## 📊 Dashboard Overview
+## Key findings
 
-The dashboard is built as a **single comprehensive page** combining multiple analytical perspectives.
+- **Bikes bring about 78% of net sales** ($148.14M of $190.4M). The other three categories together are about 22%.
+- Discounts cut gross sales by about **12.5%** ($27.2M of $217.6M).
+- Monthly net sales stay in a narrow band of roughly $15M to $16.2M. February is the lowest month ($14.84M); January, March, May, October and December are the highest.
+- Sales are spread across seven Egyptian cities; use the map and Sankey to compare them by year.
 
----
+## Recommendations
 
-### 🔍 Filters
+- Protect and grow the Bikes category, since it carries the revenue.
+- Review the discount policy against margin: 12.5% is a large share of gross sales.
+- Plan promotions around the flat seasonal curve rather than waiting for one peak.
+- Test the weaker categories (Components, Accessories) with city-specific campaigns.
 
-- **Year Selector:** 2016 – 2018  
-- **Category Selector:** All product categories  
+## About the data
 
-These filters allow dynamic exploration of sales data across time and products.
+This is a practice dashboard styled with Adidas branding. The categories (Bikes, Clothing, Accessories, Components) and Egyptian cities show that the underlying dataset is a sample or synthetic one, not real Adidas company data. The data model is embedded inside the `.pbix` file; no raw data file is included in this folder. Treat the numbers as a demonstration of dashboard design and DAX, not as real company results.
 
----
+## Tools
 
-### 📈 Key Performance Indicators (KPIs)
+Power BI Desktop · DAX (KPI measures) · Power Query · map visual · Sankey custom visual
 
-The top section highlights core financial metrics:
+## Files
 
-- **Gross Sales:** $217.6M  
-- **Discount Value:** $27.2M  
-- **Net Sales:** $190.4M  
-- **Quantity Sold:** 6M units  
+```
+Adidas Sales Dashboard/
+├── Addidas Sales_new.pbix     # dashboard (file name keeps its original spelling)
+└── assets/dashboard.png
+```
 
-These KPIs provide an immediate snapshot of overall business performance.
+## How to open
 
----
-
-### 🗺️ Net Sales by City (Map)
-
-Visualizes net sales distribution across major cities:
-
-- Alexandria  
-- Cairo  
-- Giza  
-- Port Said  
-- Ismailia  
-- Luxor  
-- Sharm El Sheikh  
-
-This view helps identify **top-performing and underperforming regions**.
-
----
-
-### 📦 Net Sales by Product Category (Bar Chart)
-
-Highlights revenue contribution by category:
-
-- **Bikes:** $148.14M  
-- **Clothing:** $22.65M  
-- **Accessories:** $12.13M  
-- **Components:** $7.49M  
-
-Clearly shows which product lines drive the majority of revenue.
-
----
-
-### 🔁 Net Sales Flow by Year & City (Sankey Diagram)
-
-Displays how net sales flow across:
-
-- **Years:** 2016, 2017, 2018  
-- **Cities:** Alexandria, Cairo, Giza, Ismailia, Luxor, Port Said, Sharm El Sheikh  
-
-This visualization helps track **sales movement and growth patterns** over time and geography.
-
----
-
-### 📆 Net Sales by Month (Line Chart)
-
-Shows monthly sales trends to uncover seasonality:
-
-- Sales remain relatively stable throughout the year  
-- Slight peaks observed in **January, March, May, and December**  
-
-This supports planning for inventory, promotions, and campaigns.
-
----
-
-## 🖼️ Dashboard Screenshot
-
-Preview of the dashboard design and layout:
-
-![Sales Dashboard](assets/dashboard.png)
-
-*(High-resolution dashboard image is stored in the `assets/` folder)*
-
----
-
-## 🧠 Insights & Recommendations
-
-### 🔑 Key Insights
-- Bikes dominate sales, contributing the majority of net revenue.  
-- Sales performance is strongest in major cities like **Cairo and Alexandria**.  
-- Monthly sales show consistent performance with mild seasonal fluctuations.  
-- Discounts have a noticeable impact on reducing gross sales to net sales.  
-
-### 💡 Recommendations
-- Focus marketing and inventory efforts on **high-performing cities**.  
-- Expand and optimize the **Bikes category**, as it drives most revenue.  
-- Leverage seasonal peaks for targeted promotional campaigns.  
-- Monitor discount strategies to balance volume growth and profitability.  
-
----
-
-## 🛠 Skills & Techniques Demonstrated
-
-- Power BI data modeling  
-- DAX measures for financial KPIs  
-- Interactive filters and slicers  
-- Geospatial analysis using maps  
-- Advanced visualizations (Sankey Diagram)  
-- Business-oriented dashboard storytelling  
-
----
-
-## 📂 Data Information
-
-- Sales data covering 2016–2018  
-- Includes product, city, category, and time dimensions  
-- Data prepared and transformed using **Power Query**  
-- Dataset used for analytical and educational purposes  
-
-
+Open `Addidas Sales_new.pbix` in Power BI Desktop. The Sankey chart needs a custom visual, which Power BI will offer to load.
