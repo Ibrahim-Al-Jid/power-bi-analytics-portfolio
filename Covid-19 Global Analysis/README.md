@@ -1,133 +1,79 @@
-# 🌍 COVID-19 Global Analysis Dashboard (Power BI)
+# 🌍 COVID-19 Global Analysis
 
-## 📌 Project Overview
-This Power BI project provides a **comprehensive global analysis of the COVID-19 pandemic**, focusing on case trends, fatalities, government response, and cross-country comparisons.
+🌐 **English** | [العربية](README.ar.md) · [← Back to portfolio](../README.md)
 
-The dashboard is designed to help users:
-- Understand how the pandemic evolved over time.
-- Compare countries and continents.
-- Explore relationships between government policies and COVID-19 outcomes.
-- Identify the most affected regions using data-driven insights.
+A four-page Power BI report on the first nine months of the pandemic: how cases and deaths evolved, how countries and continents compare, and whether stricter government response went with better outcomes.
 
----
-
-## 🛠️ Tools & Technologies
-- **Power BI**
-- **DAX**
-- **Data Modeling**
-- **Interactive Dashboards**
-- **Time Series Analysis**
-- **Geospatial Visualization (Maps)**
-
----
-
-## 📊 Dashboard Pages & Description
-
----
-
-### 1️⃣ Overview Page
 ![Overview](assets/overview.png)
 
-#### Content:
-- Global KPIs:
-  - Total Cases (Cumulative)
-  - Total Deaths (Cumulative)
-  - Case Fatality Rate (CFR %)
-  - Average New Cases per Million
-- Line chart showing **New Cases vs New Deaths over time**.
-- Bar chart comparing **average new cases per million by continent**.
-- World map displaying the **global distribution of COVID-19 cases**.
-- Filters:
-  - Date range (Dec 31, 2019 – Sep 19, 2020)
-  - Continent
-  - Location
+## Business questions
 
-#### Purpose:
-Provides a **high-level snapshot** of the pandemic globally, highlighting major trends and regional differences.
+- How did cases and deaths develop over time, globally and by continent?
+- Which countries were hit hardest once population size is taken into account?
+- Is a higher government stringency index linked to fewer new cases?
+- Where is the fatality rate high even though case counts are moderate?
 
----
+## Dataset
 
-### 2️⃣ Country Deep Dive Page
-![Country Deep Dive](assets/country_deep_dive.png)
+| Item | Value |
+|------|-------|
+| Source | Our World in Data COVID-19 dataset (`owid-covid-data.csv`, raw) |
+| Cleaned file | `dataset before & after/cleaned_covid_data.csv` |
+| Period | 2019-12-31 to 2020-09-19 (daily) |
+| Grain | One row = one country on one day |
+| Countries | 210 (clean) |
+| Rows | 44,785 raw, 44,257 clean |
 
-#### Content:
-- Country selector for focused analysis.
-- Country-level KPIs:
-  - Total cases & deaths
-  - Case Fatality Rate (CFR)
-  - Average new cases & deaths per million
-- Trend analysis for cases and deaths over time.
-- Government Response:
-  - Average Stringency Index.
-- Comparisons:
-  - Country vs Continent vs Global averages.
+**What cleaning changed.**
+- Removed the aggregate rows `World` and `International` (528 rows) so that totals are not double counted.
+- Added four columns: `cfr` (case fatality rate), `active_cases`, `total_cases_prev`, `growth_rate`, used for the trend indicator.
 
-#### Purpose:
-Enables **deep analysis of individual countries**, helping evaluate performance and policy effectiveness.
+## Report pages
 
----
+### 1️⃣ Overview
+Global KPIs (cumulative cases and deaths, case fatality rate, average new cases per million), new cases vs new deaths over time, average new cases per million by continent, a world map, and filters for date, continent, and location.
 
-### 3️⃣ Relationships Page
+### 2️⃣ Country deep dive
+![Country deep dive](assets/country_deep_dive.png)
+
+Pick a country to see its KPIs, trend, average stringency index, and a comparison against its continent and the global average.
+
+### 3️⃣ Relationships
 ![Relationships](assets/relationships.png)
 
-#### Content:
-- Bubble Chart 1:
-  - Relationship between **government stringency and new cases per million**.
-- Bubble Chart 2:
-  - Relationship between **new cases and new deaths per million**.
-- Bubble size represents severity metrics (e.g., CFR).
-- Color-coded by continent.
+Two bubble charts: stringency vs new cases per million, and new cases vs new deaths per million. Bubble size shows case fatality rate and color shows continent.
 
-#### Purpose:
-Highlights **correlations and patterns** between policy measures, cases, and fatalities, and helps identify outliers.
+### 4️⃣ Ranking table
+![Ranking table](assets/ranking_table.png)
 
----
+Countries ranked by average new cases per million, with stringency, CFR, a case trend flag (increasing, decreasing, stable), and cumulative totals. A Top 10 view highlights the hardest-hit countries.
 
-### 4️⃣ Ranking Table Page
-![Ranking](assets/ranking_table.png)
+## Key findings
 
-#### Content:
-- Interactive ranking table including:
-  - Country & Continent
-  - Average New Cases per Million
-  - Average Stringency Index
-  - Case Fatality Rate (CFR %)
-  - Case Trend (Increasing / Decreasing / Stable)
-  - Total Cases & Deaths (Cumulative)
-- Top 10 countries with highest average new cases per million.
+- By 2020-09-19 the data shows about **30.5 million** cumulative cases and **952 thousand** deaths worldwide, a crude case fatality rate of about **3.1%** (computed from the clean CSV).
+- Average daily new cases per million differ sharply by continent: South America (about 48) is far above Asia (24), North America (22), Europe (20), Africa (5.5), and Oceania (4.5).
+- Higher stringency did not always go with fewer cases. Timing, testing capacity, and population density change the picture.
+- Small countries and territories show up as outliers because small populations inflate per-million values.
 
-#### Purpose:
-Allows **quick comparison and ranking** of countries based on pandemic severity and response.
+## Recommendations
 
----
+- Judge countries on per-million and trend measures, not cumulative totals alone.
+- Combine stringency with healthcare capacity and testing data before drawing policy conclusions.
+- Extend the model with vaccination and post-2020 data for a longer view.
 
-## 🔍 Key Insights
-- Continents showed **significant variation** in average new cases per million.
-- Some countries experienced **high fatality rates despite moderate case numbers**, indicating healthcare or policy challenges.
-- Higher government stringency did not always correlate with lower case numbers, highlighting the complexity of pandemic control.
-- Small countries and territories often appeared as **outliers** due to population size effects.
+## Tools
 
----
+Power BI Desktop · DAX · Power Query (M) · data modeling · time series · maps
 
-## 💡 Recommendations
-- Combine **policy stringency** with healthcare capacity indicators for better outcome prediction.
-- Normalize metrics by population to avoid misleading comparisons.
-- Use trend-based indicators (not cumulative only) for early warning signals.
-- Extend the analysis with vaccination and post-2020 data for longitudinal insights.
+## Files
 
----
+```
+Covid-19 Global Analysis/
+├── COVID-19 Global Analysis.pbix
+├── dataset before & after/    # raw and cleaned CSV
+└── assets/                    # screenshots
+```
 
-## 📂 Dataset Information
-- Time period: **Dec 31, 2019 – Sep 19, 2020**
-- Granularity: Daily, country-level data
-- Metrics include cases, deaths, testing, and government response indicators.
+## How to open
 
----
-
-## 🚀 How to Use
-1. Download the `.pbix` file.
-2. Open using **Power BI Desktop**.
-3. Interact with filters, maps, and visuals to explore the data.
-
----
-
+Open `COVID-19 Global Analysis.pbix` in Power BI Desktop and use the slicers and the page tabs.
