@@ -15,7 +15,7 @@
 ![Languages](https://img.shields.io/badge/docs-EN%20%7C%20AR-informational?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat)
 
-[Projects](#projects) · [Approach](#how-each-project-is-built) · [Skills](#skills-demonstrated) · [Open a project](#how-to-open-a-project) · [Contact](#contact)
+[Projects](#projects) · [Approach](#how-each-project-is-built) · [Skills](#skills-demonstrated) · [Open a project](#how-to-open-a-project)
 
 </div>
 
@@ -163,13 +163,6 @@ power-bi-analytics-portfolio/
 - The datasets come from public sources and sample sets, and are used here for learning and demonstration. They belong to their original publishers.
 - The Adidas dashboard is a practice project with Adidas styling. Its data is embedded in the `.pbix` and is not company data.
 - The Retail data contains one invoice with an invalid date. The report drops it, and the project README explains how this affects the totals.
-
-## Contact
-
-- LinkedIn: [Ibrahim Hamdy](https://www.linkedin.com/in/ibrahim-hamdy-83a964292/)
-- Email: ihamdy719@gmail.com
-
-If this portfolio is useful to you, a star on the repository is appreciated.
 
 ## License
 
