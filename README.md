@@ -57,6 +57,13 @@ power-bi-analytics-portfolio/
 2. Open a project folder and read its README.
 3. Open the `.pbix` file. If Power BI asks for the data location, point it to the project's data folder.
 
+## Contact
+
+- LinkedIn: [Ibrahim Hamdy](https://www.linkedin.com/in/ibrahim-hamdy-83a964292/)
+- Email: ihamdy719@gmail.com
+
+If you find this repository useful, feel free to give it a star.
+
 ## License
 
 [MIT](LICENSE). Datasets belong to their original publishers and are used for learning and demonstration.
